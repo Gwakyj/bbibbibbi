@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Don't Cross the Line</title>
+</head>
+
+<style type="text/css">
+
+	@font-face {font-family: "munro"; src:url("munro.ttf") format("opentype"); }
+	@font-face {font-family: "neo"; src:url("neodgm.ttf") format("opentype"); }
+
+	.contain{position: relative;}
+	.bibi{position: absolute; width: 200px; height: auto; top: 150px; left: 630px; z-index: 9998;}
+	.X{position: absolute; width: 500px; height: auto; top: 320px; left: 495px; z-index: 9999;}
+	#yellow{position: absolute; width: 200px; height: auto; animation: spin 4s linear infinite; z-index: 0; left: 650px;}
+	.bbe{position: absolute; width: 200px; height: auto; z-index: 9997; top: 20px; left: 30px;}
+	.tooltiptext{position: absolute; top: 60px; left: 200px; display: inline-block; font-family: "neo"; font-size: 1.1em;visibility: hidden; width: 200px; background-color:rgba(0,0,0,0.4); color: white; text-align: center; border-radius: 6px; padding: 5px 0;}
+	.bbe:hover .tooltiptext{visibility: visible;}
+
+	.bbe1{position: absolute; width: 200px; height: auto; z-index: 9997; top: 40px; left: 30px;}
+	.tooltiptext1{position: absolute; top: 60px; left: 200px; display: inline-block; font-family: "neo"; font-size: 1.1em;visibility: hidden; width: 200px; background-color:rgba(0,0,0,0.4); color: white; text-align: center; border-radius: 6px; padding: 5px 0;}
+	.bbe1:hover .tooltiptext1{visibility: visible;}
+
+	.bbe2{position: absolute; width: 200px; height: auto; z-index: 9997; top: 20px; left: 30px;}
+	.tooltiptext2{position: absolute; top: 60px; left: 200px; display: inline-block; font-family: "neo"; font-size: 1.1em;visibility: hidden; width: 200px; background-color:rgba(0,0,0,0.4); color: white; text-align: center; border-radius: 6px; padding: 5px 0;}
+	.bbe2:hover .tooltiptext2{visibility: visible;}
+
+	.text{position: absolute;  font-family: "neo"; font-size: 1.8em; z-index: 10000}
+
+	.text2{position: absolute; top: 350px; left: 1100px; width: 80px; height: 80px; border-radius: 40px; background-color: rgba(255,0,0,0.5);}
+	.texttext{ font-family: "neo"; font-size: 1em; line-height: 1.8em; text-align: center; color: white; visibility: hidden;}
+	.text2:hover{width: 230px; height: 230px; border-radius: 20px; padding: 30px;}
+	.text2:hover .texttext{visibility: visible;}
+
+	.text3{position: absolute; background-color: rgba(255,216,0,0.5); width: 80px; height: 80px; border-radius: 40px; top: 200px; left: 1300px; z-index: 0}
+	.text3:hover {}
+
+	.text4{position: absolute; width: 90px; height: 90px; top: 135px; left: 1215px; border-radius: 450px; background-color: rgba(255,0,0,0.5);}
+	.text4:hover{width: 250px; height: 200px; padding: 25px; z-index: 1; border-radius: 8px;}
+	.texttext4{line-height: 0.7em; font-size: 1em; line-height: 1.8em; text-align: center; font-family: "neo";  color: white; visibility: hidden;}
+	.text4:hover .texttext4{visibility: visible;}
+
+	.text5{position: absolute; background-color: rgba(255,216,0,0.5); width: 80px; height: 80px; border-radius: 40px; top: 500px; left: 1150px;z-index: 1;}
+	.texttext5{line-height: 0.7em; font-size: 1em; line-height: 1.8em; text-align: center; font-family: "neo";  color: white; visibility: hidden;}
+	.text5:hover{width: 250px; height: 200px; padding: 25px; z-index: 1; border-radius: 8px;}
+	.text5:hover .texttext5{visibility: visible;}
+	
+	#error{position: absolute; z-index: 10001;}
+	.scroll{position: absolute; width: 700px; height: 700px; font-family: "neo"; font-size: 5.5em;}
+	.scroll2{position: absolute; width: 700px; height: 700px; font-family: "neo"; font-size: 4em; top: 50px;}
+
+	.im{position: absolute; top: 260px; left: 1150px;}
+	.im1{position: absolute; top: 200px; left: 1300px;}
+	.im2{position: absolute; top: 300px; left: 1150px;}
+	.im3{position: absolute; top: 240px; left: 1300px;}
+	.im4{position: absolute; top: 340px; left: 1150px;}
+	.im5{position: absolute; top: 280px; left: 1300px;}
+
+	.im6{position: absolute; top: 450px; left: 1050px;}
+	.im7{position: absolute; top: 500px; left: 1200px;}
+	.im8{position: absolute; top: 600px; left: 1050px;}
+	.im9{position: absolute; top: 540px; left: 1200px;}
+	.im10{position: absolute; top: 640px; left: 1050px;}
+	.im11{position: absolute; top: 580px; left: 1200px;}
+
+
+	@keyframes spin {
+ 			to {transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);}
+
+    @keyframes drop {
+			from{margin-top: 0; opacity: 0;}
+			to{margin-top: 50px; opacity: 1;}		
+		}
+	@keyframes slowDrop {
+			from{margin-top: 0; opacity: 0;}
+			to{margin-top: 50px; opacity: 1;}		
+		}
+</style>
+
+<body class="contain" style="background-color: #47693d;">
+
+<style type="text/css">
+	
+</style>
+
+	<div class="bibi">
+		<img src="bibi.png" style="width: 200px; height: auto;">
+	</div>
+
+	<div class="im" style="width: 50px; height: auto;">
+		<img src="imti.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im1" style="width: 50px; height: auto;">
+		<img src="imti.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im2" style="width: 50px; height: auto;">
+		<img src="imti.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im3" style="width: 50px; height: auto;">
+		<img src="imti.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im4" style="width: 50px; height: auto;">
+		<img src="imti.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im5" style="width: 50px; height: auto;">
+		<img src="imti.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im6" style="width: 50px; height: auto;">
+		<img src="imti2.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im7" style="width: 50px; height: auto;">
+		<img src="imti2.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im8" style="width: 50px; height: auto;">
+		<img src="imti2.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im9" style="width: 50px; height: auto;">
+		<img src="imti2.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im10" style="width: 50px; height: auto;">
+		<img src="imti2.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="im11" style="width: 50px; height: auto;">
+		<img src="imti2.png" style="width: 50px; height: auto;">
+	</div>
+
+	<div class="X" style="background-color: rgba(128,36,20,0.5);" onmouseover="startR();" onmouseout="stopR();">
+		<img src="XXX.png" style="width: 500px; height: 120px; ">
+	</div>
+
+	<div id="yellow">
+		<img src="yellow.png" style="width: 200px; height: auto; opacity: 0.3;">
+	</div>
+	
+	<!--삐삐-->
+	<div class="bbe" id="ff">
+		<img src="ma.png" style="width: 200px; height: auto;">
+			<span class="tooltiptext">will you click me?</span>
+	</div>
+	
+
+	<script type="text/javascript">
+		
+		var toggle = "off";
+		var b = document.getElementById("ff");
+
+			b.onclick = function(){
+				if (toggle == "off"){
+					var d = document.getElementById("error");
+					d.style.visibility = "visible";
+					for (var i = 0; i<10; i++) {
+					var newd = d.cloneNode(true);
+					newd.style.left = Math.random()*1000 + "px";
+					newd.style.top = Math.random()*550 + "px";
+					newDs.appendChild(newd);}
+
+					toggle = "on";
+				}else if (toggle == "on"){
+					var d = document.getElementById("error");
+					d.style.visibility = "hidden";
+					newDs.innerHTML = "";
+
+					toggle = "off";
+			}}
+
+	</script>
+
+	<div class="bbe1" id="aa" style="top: 300px;">
+		<img src="ma.png" style="width: 200px; height: auto;">
+		<span class="tooltiptext1">You'd better not.</span>
+	</div>
+
+	<script type="text/javascript">
+		var toggle = "off";
+		var b = document.getElementById("aa");
+
+			b.onclick = function(){
+				if (toggle == "off"){
+					var d = document.getElementById("error");
+					d.style.visibility = "visible";
+					for (var i = 0; i<10; i++) {
+					var newd = d.cloneNode(true);
+					newd.style.left = Math.random()*1000 + "px";
+					newd.style.top = Math.random()*550 + "px";
+					newDs.appendChild(newd);}
+
+					toggle = "on";
+				}else if (toggle == "on"){
+					var d = document.getElementById("error");
+					d.style.visibility = "hidden";
+					newDs.innerHTML = "";
+
+					toggle = "off";
+			}}
+	</script>
+
+	<div class="bbe2" id="gg" style="top: 580px;">
+		<img src="ma.png" style="width: 200px; height: auto;">
+		<span class="tooltiptext2">I warned you.</span>
+	</div>
+
+	<script type="text/javascript">
+		var toggle = "off";
+		var b = document.getElementById("gg");
+
+			b.onclick = function(){
+				if (toggle == "off"){
+					var d = document.getElementById("error");
+					d.style.visibility = "visible";
+					for (var i = 0; i<10; i++) {
+					var newd = d.cloneNode(true);
+					newd.style.left = Math.random()*1000 + "px";
+					newd.style.top = Math.random()*550 + "px";
+					newDs.appendChild(newd);}
+
+					toggle = "on";
+				}else if (toggle == "on"){
+					var d = document.getElementById("error");
+					d.style.visibility = "hidden";
+					newDs.innerHTML = "";
+
+					toggle = "off";
+			}}
+	</script>
+
+	<!--에러창-->
+	<div id="error" style="top: 300px; left: 650px; visibility: hidden;">
+		<img src="error.png" style="width: 300px; height: auto;">
+	</div>
+
+	<div id="newDs" style=" position: absolute; width: 300px; height: 400px;"></div>
+
+	<!--삐삐안에 메세지-->
+	<div class="text" style=" top: 47px; left: 130px;">
+		<p>1142</p>
+	</div>
+	<div class="text" style=" top: 327px; left: 130px;">
+		<p>1818</p>
+	</div>
+	<div class="text" style=" top: 607px; left: 155px;">
+		<p>75</p>
+	</div>
+
+	<div class="scroll">
+		<p style="transform: rotate(-90deg); width: 1250px;">
+		<marquee bavior="scroll" diretion="right" scrollamount="15" >
+			Please keep the line &emsp; Hello hello stupid? &emsp; Not my business &emsp; Cause we dont know Balance</marquee></p>
+	</div>
+
+	<div class="scroll2">
+		<p style="; color:yellow; width: 1250px; width: 700px;">
+		<marquee bavior="scroll" diretion="right" scrollamount="20">
+			Back off &emsp; Jealous &emsp; Talkless &emsp; Balance</marquee></p>
+	</div>
+
+
+
+
+	<div id="newCs"></div>
+	
+
+	<script type="text/javascript">
+
+		var repeater
+		function startR(){
+			repeater = setInterval(X, 1000);
+		}
+		function stopR(){
+			clearInterval(repeater);
+			newCs.innerHTML = "";
+
+		}
+
+			function X() {
+			for(var i = 0; i < 10; i++){
+				var c = document.getElementById("yellow");
+				var newc = c.cloneNode(true);
+				newc.style.left = Math.random()*1300 + "px";
+				newc.style.top = Math.random()*550 + "px";
+				newCs.appendChild(newc);
+		};
+			}
+
+	</script>
+
+<!--첫번째줄-->
+	<div class="text2">
+		<p class="texttext">쟤는 대체 왜 <br> 저런 옷을 좋아한담? <br> 기분을 알 수 없는 <br> 저 표정은 뭐람? <br> 요새 말이 많은 <br> 걔랑 어울린다나?</p>
+	</div>
+
+	<div style="position: absolute; width: 60px; height: 60px; border-radius: 30px; top: 165px; left: 1190px; background-color: rgba(255,221,0,0.5);"></div>
+
+	<div class="text4">
+		<p class="texttext4">이 선 넘으면 침범이야 beep <br> Stop it 거리 유지해 <br> Enough 더 상대 안 해 <br> 그 선 넘으면 정색이야 beep <br> 깜빡이 켜 교양이 없어 너</p>
+	</div>
+
+	<div id="gasa2" class="text5" style="">
+		<p class="texttext5">문제야 쟤도 참 <br> 매너는 여기까지 <br> 더 상대 안 해 <br> 이대로 좋아요 <br> 걱정이야 쟤도 참</p>
+	</div>
+
+<!--두번째줄-->
+	<!--<div id="gasa" class="text2" style="background-color: red; width: 430px; height: 25px; padding: 25px; margin: 0; top: 370px; left: 1150px; z-index: 1; font-size: 1.5em; border-radius: 8px;">
+		<script>document.write(line[random_line]);</script>
+	</div>
+
+	<div id="gasa1" class="text2" style="margin: 0; top: 320px; left: 1100px;z-index: 1; font-size: 1.5em;">
+		<script>document.write(line1[random_line1]);</script>
+	</div>
+
+	<div id="gasa2" class="text2" style="margin: 0; top: 320px; left: 650px;z-index: 1;">
+		<script>document.write(line2[random_line2]);</script>-->
+	</div>
+
+
+</body>
+</html>
